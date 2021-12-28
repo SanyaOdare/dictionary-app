@@ -153,3 +153,29 @@ ul .content::-webkit-scrollbar {
   width: 0px;
 }
 
+.content li .details {
+  padding-left: 10px;
+  border-radius: 4px 0 0 4px;
+  border-left: 3px solid #146EA0;
+}
+
+.content li p {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.content li span {
+  font-size: 15px;
+  color: #7E7E7E;
+}
+
+.content .synonyms .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .synonyms span {
+  cursor: pointer;
+  margin-right: 5px;
+  text-decoration: underline;
+}
