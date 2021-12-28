@@ -38,7 +38,7 @@ body {
   font-size: 16px;
   border-radius: 5px;
   padding: 0 42px;
-  border: 1px solid #999;
+  border: 1px solid #A9ABAE;
 }
 
 .search input:focus {
@@ -47,5 +47,100 @@ body {
 }
 
 .search input::placeholder {
-  color
+  color: #A9ABAE;
+}
+
+.search :where(i, span) {
+  position: absolute;
+  top: 50%;
+  color: #A9ABAE;
+  transform: translateY(-50%);
+}
+
+.search i {
+  left: 18px;
+  pointer-events: none;
+  font-size: 16px;
+}
+
+.search input:focus ~ i {
+  color: #146EA0;
+}
+
+.search span {
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+}
+
+.search input:valid ~ span {
+  display: block;
+}
+
+.wrapper .info-text {
+  font-size: 13px;
+  color: #A9ABAE;
+}
+
+.wrapper.active .info-text {
+  display: none;
+}
+
+.info-text span {
+  font-weight: 500;
+}
+
+.wrapper ul {
+  height: 0;
+  opacity: 0;
+  padding-right: 1px;
+  overflow-y: hidden;
+  transition: all 0.2s ease;
+}
+
+.wrapper.active ul {
+  opacity: 1;
+  height: 303px;
+}
+
+.wrapper ul li {
+  display: flex;
+  list-style: none;
+  margin-bottom: 14px;
+  align-items: center;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #A9ABAE;
+  justify-content: space-between;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+ul .word p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+ul .word span {
+  font-size: 12px;
+  color: #A9ABAE;
+}
+
+ul .word i {
+  color: #A9ABAE;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+ul .content {
+  max-height: 215px;
+  overflow-y: auto;
+}
+
+ul .content::-webkit-scrollbar {
+  width: 0px;
 }
